@@ -1,0 +1,18 @@
+to get the data from the paper: 
+for fig. 4 & 5 run with:
+alpha = [0.02, 0.05, 0.1, 0.2, 0.5]
+delay = [0] 
+cs = [100] 
+static_start_pos = 0 
+noise = 0
+noise_matrices = 0
+
+for fig. 7:
+alpha = [0.01, 0.02, 0.05, 0.1, 0.2, 0.5] #a = 0.5 gives problems from delay = 2 already, at delay = 3 only a = 0.1 and 0.2 run without error message "no optimal solution found"
+delay = [0] #delay representing communication delay of measurements/control. 
+cs = [2] #gradient descent steps per timestep
+
+steps = 96 #amount of timesteps 96 is one day
+week_offset = 18 #week 18 is in the middle of spring
+offset = week_offset*672 #offset for timesteps -> determines which week we choose for generation/load profiles every week is 672 timesteps
+noise = 0
